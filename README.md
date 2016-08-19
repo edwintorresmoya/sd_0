@@ -13,10 +13,10 @@ desviacion_0 = function(base){
     }
     tru == which(tabla_sd == T)
     print(tabla_sd[,-tru])
-    return(list( basCorr = base[,tru], sdno0 = names(base[,tru]), sd0 = names(base[,-tru])))
+    return(list( basCorr = base[,tru], sd1 = names(base[,tru]), sd_0 = names(base[,-tru])))
 }
 
-class(dummy)
-
 a = desviacion_0(dummy)
-a$sd0
+a$sd_0
+a$sd1
+a$basCorr
