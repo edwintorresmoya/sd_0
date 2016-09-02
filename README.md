@@ -11,7 +11,7 @@ desviacion_0 = function(base){
         a = (sd(base[,i]) != 0)
         tabla_sd[1,i] = a
     }
-    tru == which(tabla_sd == T)
+    tru = which(tabla_sd == T)
     print(tabla_sd[,-tru])
     return(list( basCorr = base[,tru], sd1 = names(base[,tru]), sd_0 = names(base[,-tru])))
 }
