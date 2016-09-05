@@ -20,3 +20,14 @@ a = desviacion_0(dummy)
 a$sd_0
 a$sd1
 a$basCorr
+########################
+
+sd_no0 = function(base){
+    salid = as.data.frame(matrix((nrow = 1), ncol = ncol(base)))
+    colnames(salid) = colnames(base)
+    for(i in 1:ncol(base)) {a = sd(base[,i], na.rm = T)
+    salid[,i] = (a != 0)
+    }
+    return(salid)
+}
+sd_no0(salida_clus1d)
